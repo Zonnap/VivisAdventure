@@ -1,0 +1,68 @@
+[gd_scene load_steps=2 format=3 uid="uid://dw0i0x08vi47j"]
+
+[ext_resource type="Script" path="res://UI/MainMenu/main_menu.gd" id="1_rt0di"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rt0di")
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 189.0
+offset_bottom = 90.0
+theme_override_font_sizes/font_size = 66
+text = "Vivi's Adventure"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 64.0
+offset_top = -176.0
+offset_right = 134.0
+offset_bottom = -75.0
+grow_vertical = 0
+alignment = 1
+
+[node name="Start" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Start
+"
+
+[node name="Settings" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Settings
+"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Settings"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = -35.0
+offset_right = 187.0
+offset_bottom = 31.0
+
+[node name="Key Bindings" type="Button" parent="VBoxContainer/Settings/VBoxContainer"]
+layout_mode = 2
+text = "Key bindings"
+
+[node name="Audio" type="Button" parent="VBoxContainer/Settings/VBoxContainer"]
+layout_mode = 2
+text = "Audio"
+
+[node name="Exit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Exit"
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_StartButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]
