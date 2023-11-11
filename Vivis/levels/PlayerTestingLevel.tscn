@@ -1288,4 +1288,4 @@ layer_0/tile_data = PackedInt32Array(1441792, 327680, 2, 1376256, 327680, 2, 131
 metadata/_edit_lock_ = true
 
 [node name="PlayerChracter" parent="." instance=ExtResource("2_j6t1h")]
-position = Vector2(57, 278)
+position = Vector2(44, 339)
