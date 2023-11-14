@@ -1,0 +1,40 @@
+[gd_scene load_steps=2 format=3 uid="uid://d14mf8y67dgbg"]
+
+[ext_resource type="Script" path="res://UI/WinScreen/WiinScreen.gd" id="1_ie7a4"]
+
+[node name="WiinScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ie7a4")
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 451.0
+offset_top = 266.0
+offset_right = 745.0
+offset_bottom = 366.0
+theme_override_font_sizes/font_size = 71
+text = "VICTORY"
+
+[node name="Restart" type="Button" parent="."]
+offset_left = 561.0
+offset_top = 370.0
+offset_right = 626.0
+offset_bottom = 401.0
+text = "Restart"
+
+[node name="Exit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 575.0
+offset_top = 406.0
+offset_right = 612.0
+offset_bottom = 437.0
+text = "Exit"
+
+[connection signal="pressed" from="Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
