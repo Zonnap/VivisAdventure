@@ -388,13 +388,14 @@ shape = SubResource("CapsuleShape2D_uid6v")
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_mjitd")
 animation = &"Run"
-frame = 2
-
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(3, 3)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "Idle"
 libraries = {
 "": SubResource("AnimationLibrary_a1fgb")
 }
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(3, 3)
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
