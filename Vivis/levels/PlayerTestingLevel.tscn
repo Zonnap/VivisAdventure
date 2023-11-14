@@ -1192,7 +1192,9 @@ size = Vector2(84, 138)
 size = Vector2(54, 230.5)
 
 [node name="PlayerTestingLevel" type="Node2D"]
+position = Vector2(4, -1)
 script = ExtResource("1_62237")
+metadata/_edit_lock_ = true
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
@@ -1295,6 +1297,18 @@ script = ExtResource("9_jbw8m")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WinCollide"]
 position = Vector2(2073, 96.25)
 shape = SubResource("RectangleShape2D_m7uls")
+
+[node name="FishSnacks8" parent="." instance=ExtResource("6_da4gq")]
+position = Vector2(1478, 254)
+
+[node name="FishSnacks9" parent="." instance=ExtResource("6_da4gq")]
+position = Vector2(1386, 177)
+
+[node name="FishSnacks10" parent="." instance=ExtResource("6_da4gq")]
+position = Vector2(1415, 177)
+
+[node name="FishSnacks11" parent="." instance=ExtResource("6_da4gq")]
+position = Vector2(1446, 177)
 
 [connection signal="body_entered" from="WaterCollide" to="WaterCollide" method="_on_body_entered"]
 [connection signal="body_entered" from="WinCollide" to="WinCollide" method="_on_body_entered"]
