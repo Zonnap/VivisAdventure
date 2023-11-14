@@ -1,0 +1,73 @@
+[gd_scene load_steps=2 format=3 uid="uid://bl0sd1p2s6tcg"]
+
+[ext_resource type="Script" path="res://UI/MainMenu/Credits.gd" id="1_d2hoe"]
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_d2hoe")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 443.0
+offset_top = 20.0
+offset_right = 703.0
+offset_bottom = 128.0
+theme_override_font_sizes/font_size = 51
+text = "Credits"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="Label"]
+offset_left = 4.0
+offset_top = 81.0
+offset_right = 264.0
+offset_bottom = 189.0
+theme_override_font_sizes/font_size = 16
+text = "Tayler Strait - Programer
+Trevor Myers - Programer
+Tyler Strait - Artists
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Label"]
+offset_left = -87.0
+offset_top = 296.0
+offset_right = 356.0
+offset_bottom = 404.0
+theme_override_font_sizes/font_size = 51
+text = "Third Party Assets"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="Label/Label2"]
+offset_left = 72.0
+offset_top = 91.0
+offset_right = 369.0
+offset_bottom = 199.0
+theme_override_font_sizes/font_size = 16
+text = "Anokolisa - Tilemaps and backgrounds"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 41.0
+offset_top = -95.0
+offset_right = 86.0
+offset_bottom = -55.0
+grow_vertical = 0
+
+[node name="Back" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Back"
+
+[connection signal="pressed" from="VBoxContainer/Back" to="." method="_on_back_pressed"]

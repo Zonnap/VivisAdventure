@@ -44,12 +44,10 @@ layout_mode = 2
 text = "Settings
 "
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Settings"]
-layout_mode = 0
-offset_left = 80.0
-offset_top = -35.0
-offset_right = 187.0
-offset_bottom = 31.0
+[node name="Credits" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Credits
+"
 
 [node name="Exit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
@@ -57,4 +55,5 @@ text = "Exit"
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_StartButton_pressed"]
 [connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="VBoxContainer/Credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]
