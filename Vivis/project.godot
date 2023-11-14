@@ -13,6 +13,7 @@ config_version=5
 config/name="Vivis Adventure"
 run/main_scene="res://UI/MainMenu/main_menu.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
+boot_splash/image="res://Splash/Wildling-Wallpaper 4k.png"
 config/icon="res://icon.svg"
 
 [autoload]

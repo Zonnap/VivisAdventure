@@ -5,12 +5,7 @@ extends Node
 func _ready():
 	pass # Replace with function body.
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass	
-
-
+# if player character enters, give +1 snack and delete it
 func _on_body_entered(body):
 	if body.name == "PlayerCharacter":
 		Global.fishSnacks += 1

@@ -3,10 +3,10 @@ extends CharacterBody2D
 
 const SPEED = 200.0
 const JUMP_VELOCITY = -350
-var extraJump = 1
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity") # Get the gravity from the project settings to be synced with RigidBody nodes.
-@onready var anim = get_node("AnimationPlayer")
+@onready var anim = get_node("AnimationPlayer") #Get animation player on startup and make it a variable
 
+# Delta Time
 func _physics_process(delta):
 	
 	# -------------------------------------------------------- # Add the gravity.
@@ -17,15 +17,12 @@ func _physics_process(delta):
 	# -------------------------------------------------------- X
 	# -------------------------------------------------------- Handle Jump.
 	
-	if Input.is_action_just_pressed("jump") && extraJump >= 1:
-		extraJump -= 1
+	if Input.is_action_just_pressed("jump") && is_on_floor():
 		velocity.y = JUMP_VELOCITY
 	else:
 		pass
-	print(extraJump)
-	if is_on_floor():
-		extraJump = 1
 	
+	# Jump and fall animations
 	if not is_on_floor():
 		if velocity.y < 0:
 			anim.play("Jump")
@@ -38,11 +35,13 @@ func _physics_process(delta):
 	# Get the input direction and handle the movement/deceleration.
 	var direction = Input.get_axis("move_left", "move_right")
 	
+	# Flip sprtie to velocity direction
 	if direction == -1:
 		get_node("AnimatedSprite2D").flip_h = true
 	elif direction == 1:
 		get_node("AnimatedSprite2D").flip_h = false
 	
+	# Move depending in direction vbalue
 	if direction:
 		velocity.x = direction * SPEED
 		if velocity.y == 0:
@@ -52,5 +51,6 @@ func _physics_process(delta):
 		if velocity.y == 0:
 			anim.play("Idle")
 	
+	# Enables movement and physics of player
 	move_and_slide()
 	# -------------------------------------------------------- X
