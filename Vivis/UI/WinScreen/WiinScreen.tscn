@@ -22,6 +22,7 @@ theme_override_font_sizes/font_size = 71
 text = "VICTORY"
 
 [node name="Restart" type="Button" parent="."]
+layout_mode = 0
 offset_left = 561.0
 offset_top = 370.0
 offset_right = 626.0

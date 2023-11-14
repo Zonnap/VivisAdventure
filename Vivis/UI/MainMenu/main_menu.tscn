@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dw0i0x08vi47j"]
+[gd_scene load_steps=3 format=3 uid="uid://dw0i0x08vi47j"]
 
 [ext_resource type="Script" path="res://UI/MainMenu/main_menu.gd" id="1_rt0di"]
+[ext_resource type="AudioStream" uid="uid://cartwiiwi4unj" path="res://Music/Catnip.mp3" id="2_44s6g"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -52,6 +53,10 @@ text = "Credits
 [node name="Exit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "Exit"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_44s6g")
+autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_StartButton_pressed"]
 [connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]
