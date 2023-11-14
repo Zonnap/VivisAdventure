@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dlyexi7yy5csv"
-path="res://.godot/imported/FishSnack.png-031a9ab7a697d78df245ed1503026989.ctex"
+path="res://.godot/imported/FishSnack.png-9427c6c6a346c08e3c3cc872fb557a49.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://levels/Assets/FishSnack.png"
-dest_files=["res://.godot/imported/FishSnack.png-031a9ab7a697d78df245ed1503026989.ctex"]
+source_file="res://Pickups/FishSnack.png"
+dest_files=["res://.godot/imported/FishSnack.png-9427c6c6a346c08e3c3cc872fb557a49.ctex"]
 
 [params]
 

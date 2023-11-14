@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxyxx0qp2mamp"]
+
+[ext_resource type="Script" path="res://Pickups/FishSnack.gd" id="1_ahxfh"]
+[ext_resource type="Texture2D" uid="uid://dlyexi7yy5csv" path="res://Pickups/FishSnack.png" id="1_i36mf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_34vkc"]
+
+[node name="FishSnacks" type="Area2D"]
+script = ExtResource("1_ahxfh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_34vkc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_i36mf")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
