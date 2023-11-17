@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dyhlwyndnudw5"]
+[gd_scene load_steps=17 format=3 uid="uid://dyhlwyndnudw5"]
 
 [ext_resource type="Texture2D" uid="uid://c00vtmwodn1ym" path="res://levels/Assets/Tiles/Assets/Assets.png" id="1_0ucd2"]
 [ext_resource type="Script" path="res://levels/Scripts/PlayerTestingLevel.gd" id="1_62237"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cxyxx0qp2mamp" path="res://Pickups/FishSnacks.tscn" id="6_da4gq"]
 [ext_resource type="Script" path="res://levels/WaterCollide.gd" id="8_bwnrl"]
 [ext_resource type="Script" path="res://levels/WinCollide.gd" id="9_jbw8m"]
+[ext_resource type="Script" path="res://Player/FishCounter.gd" id="11_ymocm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cqrj0"]
 texture = ExtResource("1_0ucd2")
@@ -1197,10 +1198,6 @@ position = Vector2(4, -1)
 script = ExtResource("1_62237")
 metadata/_edit_lock_ = true
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_ck01j")
-autoplay = true
-
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
 rotation = 0.000142727
@@ -1265,55 +1262,96 @@ position = Vector2(249.269, 136.534)
 texture = ExtResource("4_tcl2m")
 metadata/_edit_lock_ = true
 
-[node name="PlayerCharacter" parent="." instance=ExtResource("2_j6t1h")]
+[node name="Player" type="Node2D" parent="."]
 position = Vector2(87, 351)
+scale = Vector2(0.8, 0.8)
 
-[node name="FishSnacks" parent="." instance=ExtResource("6_da4gq")]
-position = Vector2(224, 354)
+[node name="PlayerCharacter" parent="Player" instance=ExtResource("2_j6t1h")]
+scale = Vector2(1, 1)
 
-[node name="FishSnacks2" parent="." instance=ExtResource("6_da4gq")]
-position = Vector2(485, 353)
+[node name="DamageColliders" type="Node2D" parent="."]
 
-[node name="FishSnacks3" parent="." instance=ExtResource("6_da4gq")]
-position = Vector2(575, 307)
-
-[node name="FishSnacks4" parent="." instance=ExtResource("6_da4gq")]
-position = Vector2(825, 306)
-
-[node name="FishSnacks5" parent="." instance=ExtResource("6_da4gq")]
-position = Vector2(936, 260)
-
-[node name="FishSnacks6" parent="." instance=ExtResource("6_da4gq")]
-position = Vector2(1174, 277)
-
-[node name="FishSnacks7" parent="." instance=ExtResource("6_da4gq")]
-position = Vector2(1175, 165)
-
-[node name="WaterCollide" type="Area2D" parent="."]
+[node name="WaterCollide" type="Area2D" parent="DamageColliders"]
 script = ExtResource("8_bwnrl")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WaterCollide"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageColliders/WaterCollide"]
 position = Vector2(560, 535)
 shape = SubResource("RectangleShape2D_dhbff")
 
-[node name="WinCollide" type="Area2D" parent="."]
+[node name="WinCollide" type="Area2D" parent="DamageColliders"]
 script = ExtResource("9_jbw8m")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WinCollide"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageColliders/WinCollide"]
 position = Vector2(2073, 96.25)
 shape = SubResource("RectangleShape2D_m7uls")
 
-[node name="FishSnacks8" parent="." instance=ExtResource("6_da4gq")]
+[node name="Pickups" type="Node2D" parent="."]
+
+[node name="FishSnacks" parent="Pickups" instance=ExtResource("6_da4gq")]
+position = Vector2(224, 354)
+
+[node name="FishSnacks2" parent="Pickups" instance=ExtResource("6_da4gq")]
+position = Vector2(485, 353)
+
+[node name="FishSnacks3" parent="Pickups" instance=ExtResource("6_da4gq")]
+position = Vector2(575, 307)
+
+[node name="FishSnacks4" parent="Pickups" instance=ExtResource("6_da4gq")]
+position = Vector2(825, 306)
+
+[node name="FishSnacks5" parent="Pickups" instance=ExtResource("6_da4gq")]
+position = Vector2(936, 260)
+
+[node name="FishSnacks6" parent="Pickups" instance=ExtResource("6_da4gq")]
+position = Vector2(1174, 277)
+
+[node name="FishSnacks7" parent="Pickups" instance=ExtResource("6_da4gq")]
+position = Vector2(1175, 165)
+
+[node name="FishSnacks8" parent="Pickups" instance=ExtResource("6_da4gq")]
 position = Vector2(1478, 254)
 
-[node name="FishSnacks9" parent="." instance=ExtResource("6_da4gq")]
+[node name="FishSnacks9" parent="Pickups" instance=ExtResource("6_da4gq")]
 position = Vector2(1386, 177)
 
-[node name="FishSnacks10" parent="." instance=ExtResource("6_da4gq")]
+[node name="FishSnacks10" parent="Pickups" instance=ExtResource("6_da4gq")]
 position = Vector2(1415, 177)
 
-[node name="FishSnacks11" parent="." instance=ExtResource("6_da4gq")]
+[node name="FishSnacks11" parent="Pickups" instance=ExtResource("6_da4gq")]
 position = Vector2(1446, 177)
 
-[connection signal="body_entered" from="WaterCollide" to="WaterCollide" method="_on_body_entered"]
-[connection signal="body_entered" from="WinCollide" to="WinCollide" method="_on_body_entered"]
+[node name="Audio" type="Node2D" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource("2_ck01j")
+autoplay = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 655.0
+offset_top = -1.0
+offset_right = 695.0
+offset_bottom = 39.0
+
+[node name="FishCounter" type="Label" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.375
+anchor_top = 1.0
+anchor_right = -0.375
+anchor_bottom = 1.0
+offset_left = -80.0
+offset_top = -39.0
+offset_right = 80.0
+offset_bottom = 41.0
+theme_override_font_sizes/font_size = 56
+text = "Score"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("11_ymocm")
+
+[connection signal="body_entered" from="DamageColliders/WaterCollide" to="DamageColliders/WaterCollide" method="_on_body_entered"]
+[connection signal="body_entered" from="DamageColliders/WinCollide" to="DamageColliders/WinCollide" method="_on_body_entered"]
