@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://de56mjd13oeq7"]
+
+[ext_resource type="Script" path="res://UI/DeathScreen/DeathScreen.gd" id="1_ej20y"]
+[ext_resource type="AudioStream" uid="uid://cyt143fouc7q2" path="res://Music/Catnip.wav" id="2_wmaqh"]
+
+[node name="DeathScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ej20y")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 456.0
+offset_top = 232.0
+offset_right = 761.0
+offset_bottom = 332.0
+theme_override_font_sizes/font_size = 71
+text = "You Died"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 584.0
+offset_top = 384.0
+offset_right = 630.0
+offset_bottom = 422.0
+theme_override_font_sizes/font_size = 21
+text = "Exit"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_wmaqh")
+pitch_scale = 0.5
+autoplay = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

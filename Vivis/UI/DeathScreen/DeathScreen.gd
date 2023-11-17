@@ -1,4 +1,4 @@
-extends Area2D
+extends Control
 
 
 # Called when the node enters the scene tree for the first time.
@@ -11,6 +11,5 @@ func _process(_delta):
 	pass
 
 
-func _on_body_entered(body):
-	if body.name == "PlayerCharacter":
-		get_tree().change_scene_to_file("res://UI/WinScreen/WiinScreen.tscn")
+func _on_button_pressed():
+	get_tree().quit()

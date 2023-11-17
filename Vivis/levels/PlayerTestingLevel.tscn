@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dyhlwyndnudw5"]
+[gd_scene load_steps=18 format=3 uid="uid://dyhlwyndnudw5"]
 
 [ext_resource type="Texture2D" uid="uid://c00vtmwodn1ym" path="res://levels/Assets/Tiles/Assets/Assets.png" id="1_0ucd2"]
 [ext_resource type="Script" path="res://levels/Scripts/PlayerTestingLevel.gd" id="1_62237"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" path="res://levels/WaterCollide.gd" id="8_bwnrl"]
 [ext_resource type="Script" path="res://levels/WinCollide.gd" id="9_jbw8m"]
 [ext_resource type="Script" path="res://Player/FishCounter.gd" id="11_ymocm"]
+[ext_resource type="PackedScene" uid="uid://dfgbu5l118bb7" path="res://Obstacles/Thorn.tscn" id="12_twv8i"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cqrj0"]
 texture = ExtResource("1_0ucd2")
@@ -1353,5 +1354,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("11_ymocm")
 
+[node name="Obstacles" type="Node" parent="."]
+
+[node name="Thorn" parent="Obstacles" instance=ExtResource("12_twv8i")]
+position = Vector2(272, 360)
+
 [connection signal="body_entered" from="DamageColliders/WaterCollide" to="DamageColliders/WaterCollide" method="_on_body_entered"]
 [connection signal="body_entered" from="DamageColliders/WinCollide" to="DamageColliders/WinCollide" method="_on_body_entered"]
+[connection signal="body_entered" from="Obstacles/Thorn" to="Player/PlayerCharacter" method="_on_thorn_body_entered"]

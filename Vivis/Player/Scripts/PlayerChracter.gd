@@ -1,11 +1,16 @@
 extends CharacterBody2D
 
+signal health_updated()
+
+var health = 0
+var maxHealth = 3
+var isDead = false
 
 const SPEED = 200.0
 const JUMP_VELOCITY = -350
-
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity") # Get the gravity from the project settings to be synced with RigidBody nodes.
 @onready var anim = get_node("AnimationPlayer") #Get animation player on startup and make it a variable
+
 
 # Delta Time
 func _physics_process(delta):
@@ -57,4 +62,21 @@ func _physics_process(delta):
 	# -------------------------------------------------------- X
 # -------------------------------------------------------- Player Health and Damage
 
+func _ready():
+	health = maxHealth
 
+func _process(delta):
+	if isDead == true:
+		get_tree().change_scene_to_file("res://UI/DeathScreen/DeathScreen.tscn")
+	
+
+#func _on_area_2d_body_entered(body):
+#	if  body.name == "Thorn":
+#		health -= 1
+#		print(health)
+#	if health <= 0:
+#		health = 0
+#		isDead = true
+#	if health > maxHealth:
+#		health = maxHealth
+	

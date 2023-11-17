@@ -1,4 +1,4 @@
 extends Node
 
 var fishSnacks = 0
-var PlayerHP
+var PlayerHP = 0
