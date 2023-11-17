@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cyt143fouc7q2"
-path="res://.godot/imported/Catnip.wav-47852c01a9eaf2a0e9388076dc438b79.sample"
+path="res://.godot/imported/Catnip.wav-64d7e276430da6f52ad8edd91c96b522.sample"
 
 [deps]
 
-source_file="res://Catnip.wav"
-dest_files=["res://.godot/imported/Catnip.wav-47852c01a9eaf2a0e9388076dc438b79.sample"]
+source_file="res://Music/Catnip.wav"
+dest_files=["res://.godot/imported/Catnip.wav-64d7e276430da6f52ad8edd91c96b522.sample"]
 
 [params]
 
@@ -18,7 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-edit/loop_mode=0
+edit/loop_mode=2
 edit/loop_begin=0
 edit/loop_end=-1
 compress/mode=0
