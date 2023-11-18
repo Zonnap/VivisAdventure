@@ -1,103 +1,55 @@
-[gd_scene load_steps=34 format=3 uid="uid://bufcbgo5gj56d"]
+[gd_scene load_steps=49 format=3 uid="uid://bufcbgo5gj56d"]
 
 [ext_resource type="Script" path="res://Player/Scripts/PlayerChracter.gd" id="1_8duy6"]
-[ext_resource type="Texture2D" uid="uid://2ag447jgfpti" path="res://Player/Assets/Asset Packs 1-3 (final) TEMPORARY/Asset Pack-V1/Sprite Sheets/player jump 48x48.png" id="2_gorb7"]
-[ext_resource type="Texture2D" uid="uid://cd7enwsfcumtm" path="res://Player/Assets/Asset Packs 1-3 (final) TEMPORARY/Asset Pack-V1/Sprite Sheets/Character Idle 48x48.png" id="3_sjhyf"]
-[ext_resource type="Texture2D" uid="uid://bxl00al1uonyy" path="res://Player/Assets/Asset Packs 1-3 (final) TEMPORARY/Asset Pack-V1/Sprite Sheets/run cycle 48x48.png" id="4_8jcb4"]
+[ext_resource type="Texture2D" uid="uid://c4tk108eqati" path="res://Animation/Cat/CatAnimations/Licking Black Cat-Sheet-updated/Licking Black Cat-Sheet-updated-0.png" id="3_25hre"]
+[ext_resource type="Texture2D" uid="uid://vroo50ex8iy5" path="res://Animation/Cat/CatAnimations/Licking Black Cat-Sheet-updated/Licking Black Cat-Sheet-updated-1.png" id="4_4gt8g"]
+[ext_resource type="Texture2D" uid="uid://ds8m0bv0twa6w" path="res://Animation/Cat/CatAnimations/Jumping Black Cat/Jumping Black Cat-0.png" id="4_xjdgx"]
+[ext_resource type="Texture2D" uid="uid://e7x0acvpts5c" path="res://Animation/Cat/CatAnimations/Licking Black Cat-Sheet-updated/Licking Black Cat-Sheet-updated-2.png" id="5_0i3en"]
+[ext_resource type="Texture2D" uid="uid://b2dt52tsys03c" path="res://Animation/Cat/CatAnimations/Jumping Black Cat/Jumping Black Cat-1.png" id="5_wtf2b"]
+[ext_resource type="Texture2D" uid="uid://cqmwawu207eu8" path="res://Animation/Cat/CatAnimations/Jumping Black Cat/Jumping Black Cat-2.png" id="6_13joe"]
+[ext_resource type="Texture2D" uid="uid://de37v8dq3nbv2" path="res://Animation/Cat/CatAnimations/Licking Black Cat-Sheet-updated/Licking Black Cat-Sheet-updated-3.png" id="6_cruks"]
+[ext_resource type="Texture2D" uid="uid://vjng4ymlgcni" path="res://Animation/Cat/CatAnimations/Jumping Black Cat/Jumping Black Cat-3.png" id="7_mmdoo"]
+[ext_resource type="Texture2D" uid="uid://bw8k4mdx2frq3" path="res://Animation/Cat/CatAnimations/Licking Black Cat-Sheet-updated/Licking Black Cat-Sheet-updated-4.png" id="7_xryg4"]
+[ext_resource type="Texture2D" uid="uid://dqn61jwscbnc7" path="res://Animation/Cat/CatAnimations/Licking Black Cat-Sheet-updated/Licking Black Cat-Sheet-updated-5.png" id="8_5eu37"]
+[ext_resource type="Texture2D" uid="uid://dp4lf2ig0ym3b" path="res://Animation/Cat/CatAnimations/Jumping Black Cat/Jumping Black Cat-4.png" id="8_flqp1"]
+[ext_resource type="Texture2D" uid="uid://ddaw1dtff6srx" path="res://Animation/Cat/CatAnimations/Jumping Black Cat/Jumping Black Cat-5.png" id="9_1leog"]
+[ext_resource type="Texture2D" uid="uid://dmppekjnrksxo" path="res://Animation/Cat/CatAnimations/Licking Black Cat-Sheet-updated/Licking Black Cat-Sheet-updated-6.png" id="9_hq0sw"]
+[ext_resource type="Texture2D" uid="uid://dt2hrmmnam5hr" path="res://Animation/Cat/CatAnimations/Licking Black Cat-Sheet-updated/Licking Black Cat-Sheet-updated-7.png" id="10_gc337"]
+[ext_resource type="Texture2D" uid="uid://cdmp7sgefvggr" path="res://Animation/Cat/CatAnimations/Jumping Black Cat/Jumping Black Cat-6.png" id="10_ybn0n"]
+[ext_resource type="Texture2D" uid="uid://bmyukps4y35w5" path="res://Animation/Cat/CatAnimations/Running Black Cat/Running Black Cat-0.png" id="11_1d3cw"]
+[ext_resource type="Texture2D" uid="uid://bbpllso51jxa" path="res://Animation/Cat/CatAnimations/Licking Black Cat-Sheet-updated/Licking Black Cat-Sheet-updated-8.png" id="11_t7lyt"]
+[ext_resource type="Texture2D" uid="uid://bumy088krkaa0" path="res://Animation/Cat/CatAnimations/Running Black Cat/Running Black Cat-1.png" id="12_1oqvh"]
+[ext_resource type="Texture2D" uid="uid://bhxoli43e6ve8" path="res://Animation/Cat/CatAnimations/Licking Black Cat-Sheet-updated/Licking Black Cat-Sheet-updated-9.png" id="12_05c47"]
+[ext_resource type="Texture2D" uid="uid://jp8tbe44n3my" path="res://Animation/Cat/CatAnimations/Licking Black Cat-Sheet-updated/Licking Black Cat-Sheet-updated-10.png" id="13_0brtg"]
+[ext_resource type="Texture2D" uid="uid://c00q6xxvbtmcs" path="res://Animation/Cat/CatAnimations/Running Black Cat/Running Black Cat-2.png" id="13_p2cjx"]
+[ext_resource type="Texture2D" uid="uid://cvnxsu83yojga" path="res://Animation/Cat/CatAnimations/Licking Black Cat-Sheet-updated/Licking Black Cat-Sheet-updated-11.png" id="14_3c2h4"]
+[ext_resource type="Texture2D" uid="uid://daqdtlaxminn3" path="res://Animation/Cat/CatAnimations/Running Black Cat/Running Black Cat-3.png" id="14_qleyy"]
+[ext_resource type="Texture2D" uid="uid://1al14jvkclwv" path="res://Animation/Cat/CatAnimations/Licking Black Cat-Sheet-updated/Licking Black Cat-Sheet-updated-12.png" id="15_plli3"]
+[ext_resource type="Texture2D" uid="uid://bosac7xuxb1u0" path="res://Animation/Cat/CatAnimations/Sitting Black Cat/Sitting Black Cat-0.png" id="15_wlffk"]
+[ext_resource type="Texture2D" uid="uid://crdbuok6jlbni" path="res://Animation/Cat/CatAnimations/Sitting Black Cat/Sitting Black Cat-1.png" id="16_n6l6m"]
+[ext_resource type="Texture2D" uid="uid://csh7ycqr6k3ak" path="res://Animation/Cat/CatAnimations/Licking Black Cat-Sheet-updated/Licking Black Cat-Sheet-updated-13.png" id="16_th33w"]
+[ext_resource type="Texture2D" uid="uid://cqhbvrna2dstw" path="res://Animation/Cat/CatAnimations/Sitting Black Cat/Sitting Black Cat-2.png" id="17_nc8it"]
+[ext_resource type="Texture2D" uid="uid://bf04tk057gb5k" path="res://Animation/Cat/CatAnimations/Licking Black Cat-Sheet-updated/Licking Black Cat-Sheet-updated-14.png" id="17_s4ais"]
+[ext_resource type="Texture2D" uid="uid://c4ffgy7t1x7x" path="res://Animation/Cat/CatAnimations/Sitting Black Cat/Sitting Black Cat-3.png" id="18_b3kcy"]
+[ext_resource type="Texture2D" uid="uid://dhg1i48rdp0et" path="res://Animation/Cat/CatAnimations/Sitting Black Cat/Sitting Black Cat-4.png" id="19_anpll"]
+[ext_resource type="Texture2D" uid="uid://dchqyqy78dyua" path="res://Animation/Cat/CatAnimations/Walking Black Cat/Walking Black Cat-0.png" id="33_obmi8"]
+[ext_resource type="Texture2D" uid="uid://bmif04g30ucdp" path="res://Animation/Cat/CatAnimations/Walking Black Cat/Walking Black Cat-1.png" id="34_t8de7"]
+[ext_resource type="Texture2D" uid="uid://c24aicvh82fo5" path="res://Animation/Cat/CatAnimations/Walking Black Cat/Walking Black Cat-2.png" id="35_mjnc2"]
+[ext_resource type="Texture2D" uid="uid://c8cfjp3kevvsk" path="res://Animation/Cat/CatAnimations/Walking Black Cat/Walking Black Cat-3.png" id="36_fdacc"]
+[ext_resource type="Texture2D" uid="uid://bonacuem6u4a6" path="res://Animation/Cat/CatAnimations/Walking Black Cat/Walking Black Cat-4.png" id="37_kyuxv"]
+[ext_resource type="Texture2D" uid="uid://xyadt1601hbm" path="res://Animation/Cat/CatAnimations/Walking Black Cat/Walking Black Cat-5.png" id="38_kx4xu"]
+[ext_resource type="Texture2D" uid="uid://dix6bwk23otrd" path="res://Animation/Cat/CatAnimations/Walking Black Cat/Walking Black Cat-6.png" id="39_2vjw2"]
+[ext_resource type="Texture2D" uid="uid://cwhenh8214jwb" path="res://Animation/Cat/CatAnimations/Walking Black Cat/Walking Black Cat-7.png" id="40_6k5pl"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uid6v"]
 radius = 6.0
 height = 32.0
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ebcbk"]
-atlas = ExtResource("2_gorb7")
-region = Rect2(96, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vhjwm"]
-atlas = ExtResource("3_sjhyf")
-region = Rect2(0, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8i8m0"]
-atlas = ExtResource("3_sjhyf")
-region = Rect2(48, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_pqbjx"]
-atlas = ExtResource("3_sjhyf")
-region = Rect2(96, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_l18b6"]
-atlas = ExtResource("3_sjhyf")
-region = Rect2(144, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_o3s07"]
-atlas = ExtResource("3_sjhyf")
-region = Rect2(192, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_u20gc"]
-atlas = ExtResource("3_sjhyf")
-region = Rect2(240, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_syewv"]
-atlas = ExtResource("3_sjhyf")
-region = Rect2(288, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_d7we4"]
-atlas = ExtResource("3_sjhyf")
-region = Rect2(336, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jadnc"]
-atlas = ExtResource("3_sjhyf")
-region = Rect2(384, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6xp70"]
-atlas = ExtResource("3_sjhyf")
-region = Rect2(432, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7xs67"]
-atlas = ExtResource("2_gorb7")
-region = Rect2(0, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6kn4k"]
-atlas = ExtResource("2_gorb7")
-region = Rect2(48, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_cgcfg"]
-atlas = ExtResource("4_8jcb4")
-region = Rect2(0, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0w03p"]
-atlas = ExtResource("4_8jcb4")
-region = Rect2(48, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6oksm"]
-atlas = ExtResource("4_8jcb4")
-region = Rect2(96, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_o03va"]
-atlas = ExtResource("4_8jcb4")
-region = Rect2(144, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ig610"]
-atlas = ExtResource("4_8jcb4")
-region = Rect2(192, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ppdbu"]
-atlas = ExtResource("4_8jcb4")
-region = Rect2(240, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6wk14"]
-atlas = ExtResource("4_8jcb4")
-region = Rect2(288, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_n0n3v"]
-atlas = ExtResource("4_8jcb4")
-region = Rect2(336, 0, 48, 48)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_mjitd"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ebcbk")
+"texture": ExtResource("9_1leog")
 }],
 "loop": true,
 "name": &"Fall",
@@ -105,34 +57,49 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_vhjwm")
+"texture": ExtResource("3_25hre")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_8i8m0")
+"texture": ExtResource("4_4gt8g")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_pqbjx")
+"texture": ExtResource("5_0i3en")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_l18b6")
+"texture": ExtResource("6_cruks")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_o3s07")
+"texture": ExtResource("7_xryg4")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_u20gc")
+"texture": ExtResource("8_5eu37")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_syewv")
+"texture": ExtResource("9_hq0sw")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_d7we4")
+"texture": ExtResource("10_gc337")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jadnc")
+"texture": ExtResource("11_t7lyt")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_6xp70")
+"texture": ExtResource("12_05c47")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_0brtg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_3c2h4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_plli3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_th33w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_s4ais")
 }],
 "loop": true,
 "name": &"Idle",
@@ -140,43 +107,95 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_7xs67")
+"texture": ExtResource("4_xjdgx")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_6kn4k")
+"texture": ExtResource("5_wtf2b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_13joe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_mmdoo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_flqp1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_1leog")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ybn0n")
 }],
 "loop": true,
 "name": &"Jump",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_cgcfg")
+"texture": ExtResource("11_1d3cw")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_0w03p")
+"texture": ExtResource("12_1oqvh")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_6oksm")
+"texture": ExtResource("13_p2cjx")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_o03va")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ig610")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ppdbu")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6wk14")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_n0n3v")
+"texture": ExtResource("14_qleyy")
 }],
 "loop": true,
 "name": &"Run",
 "speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_wlffk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_n6l6m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_nc8it")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_b3kcy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_anpll")
+}],
+"loop": true,
+"name": &"Sitting",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("33_obmi8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_t8de7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_mjnc2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_fdacc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_kyuxv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_kx4xu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_2vjw2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_6k5pl")
+}],
+"loop": true,
+"name": &"Walking",
+"speed": 5.0
 }]
 
 [sub_resource type="Animation" id="Animation_pkvqe"]
@@ -386,9 +405,9 @@ shape = SubResource("CapsuleShape2D_uid6v")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
+position = Vector2(-3.75, 3.75)
 sprite_frames = SubResource("SpriteFrames_mjitd")
 animation = &"Run"
-frame = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "Idle"

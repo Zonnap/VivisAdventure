@@ -24,6 +24,10 @@ Global="res://GlobalScripts/Global.gd"
 
 window/stretch/mode="viewport"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/codeandweb.texturepacker/plugin.cfg")
+
 [input]
 
 move_right={

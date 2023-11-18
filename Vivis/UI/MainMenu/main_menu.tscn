@@ -1,21 +1,20 @@
-[gd_scene load_steps=23 format=3 uid="uid://dw0i0x08vi47j"]
+[gd_scene load_steps=22 format=3 uid="uid://dw0i0x08vi47j"]
 
 [ext_resource type="Script" path="res://UI/MainMenu/main_menu.gd" id="1_rt0di"]
-[ext_resource type="AudioStream" uid="uid://cartwiiwi4unj" path="res://Music/Catnip.mp3" id="2_44s6g"]
 [ext_resource type="FontFile" uid="uid://d0x1my3so2lwt" path="res://levels/Font/8-bit Arcade In.ttf" id="2_hjgvt"]
 [ext_resource type="Texture2D" uid="uid://dya0fax6oon5m" path="res://levels/Assets/CoverArt.png" id="3_65y36"]
-[ext_resource type="Texture2D" uid="uid://cxnix1vkgw27j" path="res://Animation/CoverArt1.png" id="5_mwx25"]
 [ext_resource type="Script" path="res://UI/MainMenu/CoverArt.gd" id="5_sp7yf"]
-[ext_resource type="Texture2D" uid="uid://dd0qwrj0v86p3" path="res://Animation/CoverArt2.png" id="6_bfq2v"]
-[ext_resource type="Texture2D" uid="uid://du8eys4ekg8qq" path="res://Animation/CoverArt3.png" id="7_vihdb"]
-[ext_resource type="Texture2D" uid="uid://cu83cb5xgsl56" path="res://Animation/CoverArt4.png" id="8_tdsnh"]
-[ext_resource type="Texture2D" uid="uid://dfdy0484olvx4" path="res://Animation/CoverArt5.png" id="9_dsiwc"]
-[ext_resource type="Texture2D" uid="uid://c2bwyj1k23ws7" path="res://Animation/CoverArt6.png" id="10_ijw08"]
-[ext_resource type="Texture2D" uid="uid://c8r6ouwxw2pco" path="res://Animation/CoverArt7.png" id="11_na5n0"]
-[ext_resource type="Texture2D" uid="uid://c7jyytcc12pgg" path="res://Animation/CoverArt8.png" id="12_cdgp6"]
-[ext_resource type="Texture2D" uid="uid://4kwh0gjmmnyb" path="res://Animation/CoverArt9.png" id="13_ngapt"]
-[ext_resource type="Texture2D" uid="uid://jq4le88alme" path="res://Animation/CoverArt10.png" id="14_tuul3"]
-[ext_resource type="Texture2D" uid="uid://cbr1hbabwtqg3" path="res://Animation/CoverArt11.png" id="15_wuvvs"]
+[ext_resource type="Texture2D" uid="uid://cxnix1vkgw27j" path="res://Animation/CoverArt/CoverArt1.png" id="6_5na3h"]
+[ext_resource type="Texture2D" uid="uid://dd0qwrj0v86p3" path="res://Animation/CoverArt/CoverArt2.png" id="7_nqpqx"]
+[ext_resource type="Texture2D" uid="uid://du8eys4ekg8qq" path="res://Animation/CoverArt/CoverArt3.png" id="8_gflvo"]
+[ext_resource type="Texture2D" uid="uid://cu83cb5xgsl56" path="res://Animation/CoverArt/CoverArt4.png" id="9_qk0sh"]
+[ext_resource type="Texture2D" uid="uid://dfdy0484olvx4" path="res://Animation/CoverArt/CoverArt5.png" id="10_p2blg"]
+[ext_resource type="Texture2D" uid="uid://c2bwyj1k23ws7" path="res://Animation/CoverArt/CoverArt6.png" id="11_mmfyt"]
+[ext_resource type="Texture2D" uid="uid://c8r6ouwxw2pco" path="res://Animation/CoverArt/CoverArt7.png" id="12_pv24x"]
+[ext_resource type="Texture2D" uid="uid://c7jyytcc12pgg" path="res://Animation/CoverArt/CoverArt8.png" id="13_1bkct"]
+[ext_resource type="Texture2D" uid="uid://4kwh0gjmmnyb" path="res://Animation/CoverArt/CoverArt9.png" id="14_n6iix"]
+[ext_resource type="Texture2D" uid="uid://jq4le88alme" path="res://Animation/CoverArt/CoverArt10.png" id="15_3lrgg"]
+[ext_resource type="Texture2D" uid="uid://cbr1hbabwtqg3" path="res://Animation/CoverArt/CoverArt11.png" id="16_0q3dd"]
 
 [sub_resource type="Animation" id="Animation_rnwao"]
 resource_name = "Menu_Animation"
@@ -30,7 +29,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("5_mwx25"), ExtResource("6_bfq2v"), ExtResource("7_vihdb"), ExtResource("8_tdsnh"), ExtResource("9_dsiwc"), ExtResource("10_ijw08"), ExtResource("11_na5n0"), ExtResource("12_cdgp6"), ExtResource("13_ngapt"), ExtResource("14_tuul3"), ExtResource("15_wuvvs")]
+"values": [ExtResource("6_5na3h"), ExtResource("7_nqpqx"), ExtResource("8_gflvo"), ExtResource("9_qk0sh"), ExtResource("10_p2blg"), ExtResource("11_mmfyt"), ExtResource("12_pv24x"), ExtResource("13_1bkct"), ExtResource("14_n6iix"), ExtResource("15_3lrgg"), ExtResource("16_0q3dd")]
 }
 
 [sub_resource type="Animation" id="Animation_nsxk4"]
@@ -200,7 +199,6 @@ theme_override_fonts/font = ExtResource("2_hjgvt")
 text = "Exit"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_44s6g")
 autoplay = true
 
 [node name="CoverArt" type="Sprite2D" parent="."]
