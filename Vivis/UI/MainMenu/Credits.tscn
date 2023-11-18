@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://bl0sd1p2s6tcg"]
+[gd_scene load_steps=5 format=3 uid="uid://bl0sd1p2s6tcg"]
 
 [ext_resource type="Script" path="res://UI/MainMenu/Credits.gd" id="1_d2hoe"]
+[ext_resource type="FontFile" uid="uid://d0x1my3so2lwt" path="res://levels/Font/8-bit Arcade In.ttf" id="2_l8cee"]
+[ext_resource type="Texture2D" uid="uid://xqanww4s0a5m" path="res://UI/MainMenu/9yP2Y51irNu2pUs0Ct9C--4--f2u1h.jpg" id="3_wyp3p"]
+
+[sub_resource type="Theme" id="Theme_ns1in"]
 
 [node name="Credits" type="Control"]
 layout_mode = 3
@@ -17,6 +21,14 @@ offset_left = 443.0
 offset_top = 20.0
 offset_right = 703.0
 offset_bottom = 128.0
+theme = SubResource("Theme_ns1in")
+theme_override_colors/font_color = Color(0.905882, 0.788235, 0.0588235, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 10
+theme_override_fonts/font = ExtResource("2_l8cee")
 theme_override_font_sizes/font_size = 51
 text = "Credits"
 horizontal_alignment = 1
@@ -24,13 +36,18 @@ vertical_alignment = 1
 
 [node name="Label" type="Label" parent="Label"]
 layout_mode = 0
-offset_left = 4.0
+offset_left = -50.0
 offset_top = 81.0
-offset_right = 264.0
-offset_bottom = 189.0
-theme_override_font_sizes/font_size = 16
-text = "Tayler Strait - Programer
-Trevor Myers - Programer
+offset_right = 312.0
+offset_bottom = 213.0
+theme_override_colors/font_color = Color(0.905882, 0.788235, 0.0588235, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_l8cee")
+theme_override_font_sizes/font_size = 30
+text = "Tayler Strait - Programmer
+Trevor Myers - Programmer
 Tyler Strait - Artists
 "
 horizontal_alignment = 1
@@ -38,10 +55,16 @@ vertical_alignment = 1
 
 [node name="Label2" type="Label" parent="Label"]
 layout_mode = 0
-offset_left = -87.0
+offset_left = -75.0
 offset_top = 296.0
-offset_right = 356.0
+offset_right = 368.0
 offset_bottom = 404.0
+theme_override_colors/font_color = Color(0.905882, 0.788235, 0.0588235, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("2_l8cee")
 theme_override_font_sizes/font_size = 51
 text = "Third Party Assets"
 horizontal_alignment = 1
@@ -49,12 +72,18 @@ vertical_alignment = 1
 
 [node name="Label" type="Label" parent="Label/Label2"]
 layout_mode = 0
-offset_left = 72.0
+offset_left = -50.0
 offset_top = 91.0
-offset_right = 369.0
+offset_right = 449.0
 offset_bottom = 199.0
-theme_override_font_sizes/font_size = 16
-text = "Anokolisa - Tilemaps and backgrounds"
+theme_override_colors/font_color = Color(0.905882, 0.788235, 0.0588235, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_l8cee")
+theme_override_font_sizes/font_size = 30
+text = "Anokolisa - Tilemaps and backgrounds
+the14collective - Cat Sprite"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -72,5 +101,11 @@ grow_vertical = 0
 [node name="Back" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "Back"
+
+[node name="9yP2y51IrNu2pUs0Ct9c--4--f2u1h" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(574, 382)
+scale = Vector2(1.16602, 1.05078)
+texture = ExtResource("3_wyp3p")
 
 [connection signal="pressed" from="VBoxContainer/Back" to="." method="_on_back_pressed"]
