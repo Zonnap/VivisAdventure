@@ -1291,36 +1291,6 @@ shape = SubResource("RectangleShape2D_m7uls")
 [node name="FishSnacks" parent="Pickups" instance=ExtResource("6_da4gq")]
 position = Vector2(224, 354)
 
-[node name="FishSnacks2" parent="Pickups" instance=ExtResource("6_da4gq")]
-position = Vector2(485, 353)
-
-[node name="FishSnacks3" parent="Pickups" instance=ExtResource("6_da4gq")]
-position = Vector2(575, 307)
-
-[node name="FishSnacks4" parent="Pickups" instance=ExtResource("6_da4gq")]
-position = Vector2(825, 306)
-
-[node name="FishSnacks5" parent="Pickups" instance=ExtResource("6_da4gq")]
-position = Vector2(936, 260)
-
-[node name="FishSnacks6" parent="Pickups" instance=ExtResource("6_da4gq")]
-position = Vector2(1174, 277)
-
-[node name="FishSnacks7" parent="Pickups" instance=ExtResource("6_da4gq")]
-position = Vector2(1175, 165)
-
-[node name="FishSnacks8" parent="Pickups" instance=ExtResource("6_da4gq")]
-position = Vector2(1478, 254)
-
-[node name="FishSnacks9" parent="Pickups" instance=ExtResource("6_da4gq")]
-position = Vector2(1386, 177)
-
-[node name="FishSnacks10" parent="Pickups" instance=ExtResource("6_da4gq")]
-position = Vector2(1415, 177)
-
-[node name="FishSnacks11" parent="Pickups" instance=ExtResource("6_da4gq")]
-position = Vector2(1446, 177)
-
 [node name="Audio" type="Node2D" parent="."]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Audio"]
@@ -1356,9 +1326,10 @@ script = ExtResource("11_ymocm")
 
 [node name="Obstacles" type="Node" parent="."]
 
-[node name="Thorn" parent="Obstacles" instance=ExtResource("12_twv8i")]
-position = Vector2(272, 360)
+[node name="Thorn" parent="." instance=ExtResource("12_twv8i")]
+position = Vector2(260, 361)
 
 [connection signal="body_entered" from="DamageColliders/WaterCollide" to="DamageColliders/WaterCollide" method="_on_body_entered"]
 [connection signal="body_entered" from="DamageColliders/WinCollide" to="DamageColliders/WinCollide" method="_on_body_entered"]
-[connection signal="body_entered" from="Obstacles/Thorn" to="Player/PlayerCharacter" method="_on_thorn_body_entered"]
+[connection signal="body_entered" from="Pickups/FishSnacks" to="Player/PlayerCharacter" method="_on_fish_snacks_body_entered"]
+[connection signal="body_entered" from="Thorn" to="Player/PlayerCharacter" method="_on_thorn_body_entered"]

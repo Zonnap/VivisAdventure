@@ -12,5 +12,3 @@ polygon = PackedVector2Array(-9, 8, 0, -9, 9, 8)
 
 [node name="Sprite2D" type="Sprite2D" parent="CollisionPolygon2D"]
 texture = ExtResource("1_or4if")
-
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]

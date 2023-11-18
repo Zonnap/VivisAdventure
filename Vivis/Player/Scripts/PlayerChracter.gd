@@ -10,7 +10,10 @@ const SPEED = 200.0
 const JUMP_VELOCITY = -350
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity") # Get the gravity from the project settings to be synced with RigidBody nodes.
 @onready var anim = get_node("AnimationPlayer") #Get animation player on startup and make it a variable
+@onready var timer = $Timer
 
+func _ready():
+	health = maxHealth
 
 # Delta Time
 func _physics_process(delta):
@@ -18,6 +21,7 @@ func _physics_process(delta):
 	# -------------------------------------------------------- # Add the gravity.
 	
 	if not is_on_floor():
+		timer.start()
 		velocity.y += gravity * delta
 		
 	# -------------------------------------------------------- X
@@ -27,10 +31,10 @@ func _physics_process(delta):
 		velocity.y = JUMP_VELOCITY
 	else:
 		pass
+		
 	
-	# Jump and fall animations
 	if not is_on_floor():
-		if velocity.y < 0:
+		if velocity.y < 0:# Jump and fall animations
 			anim.play("Jump")
 		else:
 			anim.play("Fall")
@@ -62,21 +66,23 @@ func _physics_process(delta):
 	# -------------------------------------------------------- X
 # -------------------------------------------------------- Player Health and Damage
 
-func _ready():
-	health = maxHealth
-
-func _process(delta):
+func _process(_delta):
 	if isDead == true:
 		get_tree().change_scene_to_file("res://UI/DeathScreen/DeathScreen.tscn")
 	
+func _on_thorn_body_entered(body):
+	print(body)
+	if  body.name == "PlayerCharacter":
+		health -= 1
+		print(health)
+	if health <= 0:
+		health = 0
+		isDead = true
+		_process(get_process_delta_time())
+	if health > maxHealth:
+		health = maxHealth
+# -------------------------------------------------------- X
+# -------------------------------------------------------- Fish Snacks
 
-#func _on_area_2d_body_entered(body):
-#	if  body.name == "Thorn":
-#		health -= 1
-#		print(health)
-#	if health <= 0:
-#		health = 0
-#		isDead = true
-#	if health > maxHealth:
-#		health = maxHealth
-	
+func _on_fish_snacks_body_entered(body):
+	pass

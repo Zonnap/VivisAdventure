@@ -14,5 +14,3 @@ shape = SubResource("CircleShape2D_34vkc")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
 texture = ExtResource("1_i36mf")
-
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]

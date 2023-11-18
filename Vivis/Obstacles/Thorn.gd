@@ -10,3 +10,5 @@ func _ready():
 func _process(_delta):
 	pass
 
+func body_entered(body):
+	return(body)
