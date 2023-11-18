@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://d14mf8y67dgbg"]
+[gd_scene load_steps=4 format=3 uid="uid://d14mf8y67dgbg"]
 
 [ext_resource type="Script" path="res://UI/WinScreen/WiinScreen.gd" id="1_ie7a4"]
+[ext_resource type="FontFile" uid="uid://d0x1my3so2lwt" path="res://levels/Font/8-bit Arcade In.ttf" id="2_a5enf"]
+[ext_resource type="Texture2D" uid="uid://csb1sjg7idthg" path="res://UI/WinScreen/i9unxQJeeAWKt7uE50VS--8--h4611.jpg" id="3_6fk75"]
 
 [node name="WiinScreen" type="Control"]
 layout_mode = 3
@@ -18,24 +20,38 @@ offset_left = 451.0
 offset_top = 266.0
 offset_right = 745.0
 offset_bottom = 366.0
-theme_override_font_sizes/font_size = 71
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_a5enf")
+theme_override_font_sizes/font_size = 90
 text = "VICTORY"
 
 [node name="Restart" type="Button" parent="."]
 layout_mode = 0
-offset_left = 561.0
-offset_top = 370.0
-offset_right = 626.0
+offset_left = 514.0
+offset_top = 355.0
+offset_right = 673.0
 offset_bottom = 401.0
+theme_override_fonts/font = ExtResource("2_a5enf")
+theme_override_font_sizes/font_size = 40
 text = "Restart"
 
 [node name="Exit" type="Button" parent="."]
 layout_mode = 0
-offset_left = 575.0
+offset_left = 538.0
 offset_top = 406.0
-offset_right = 612.0
-offset_bottom = 437.0
+offset_right = 653.0
+offset_bottom = 441.0
+theme_override_fonts/font = ExtResource("2_a5enf")
+theme_override_font_sizes/font_size = 40
 text = "Exit"
+
+[node name="I9UnxQJeeAwKt7uE50vs--8--h4611" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(562, 369)
+scale = Vector2(1.16797, 1)
+texture = ExtResource("3_6fk75")
 
 [connection signal="pressed" from="Restart" to="." method="_on_restart_pressed"]
 [connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]

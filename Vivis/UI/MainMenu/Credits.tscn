@@ -93,13 +93,20 @@ anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_left = 64.0
-offset_top = -104.0
-offset_right = 109.0
+offset_top = -126.0
+offset_right = 216.0
 offset_bottom = -64.0
 grow_vertical = 0
 
 [node name="Back" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.94
+theme_override_colors/font_color = Color(0.917647, 0.792157, 0.12549, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_l8cee")
+theme_override_font_sizes/font_size = 60
 text = "Back"
 
 [node name="9yP2y51IrNu2pUs0Ct9c--4--f2u1h" type="Sprite2D" parent="."]
