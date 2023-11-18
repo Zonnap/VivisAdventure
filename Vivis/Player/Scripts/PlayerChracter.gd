@@ -86,3 +86,10 @@ func _on_thorn_body_entered(body):
 
 func _on_fish_snacks_body_entered(body):
 	pass
+	#-----------------------------------------------------X
+#-------------------------------------------------------- Pause
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("ui_cancel"):
+		$PauseMenu.pause()
+		
