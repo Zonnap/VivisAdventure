@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://xsc745xv1y3i"]
+
+[ext_resource type="Texture2D" uid="uid://bjijwn0pepno4" path="res://Obstacles/CatTree.png" id="1_i7jnp"]
+
+[node name="CatTree" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_i7jnp")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dyhlwyndnudw5"]
+[gd_scene load_steps=19 format=3 uid="uid://dyhlwyndnudw5"]
 
 [ext_resource type="Texture2D" uid="uid://c00vtmwodn1ym" path="res://levels/Assets/Tiles/Assets/Assets.png" id="1_0ucd2"]
 [ext_resource type="Script" path="res://levels/Scripts/PlayerTestingLevel.gd" id="1_62237"]
@@ -12,6 +12,7 @@
 [ext_resource type="Script" path="res://levels/WinCollide.gd" id="9_jbw8m"]
 [ext_resource type="Script" path="res://Player/FishCounter.gd" id="11_ymocm"]
 [ext_resource type="PackedScene" uid="uid://dfgbu5l118bb7" path="res://Obstacles/Thorn.tscn" id="12_twv8i"]
+[ext_resource type="PackedScene" uid="uid://xsc745xv1y3i" path="res://Obstacles/CatTree.tscn" id="13_flh1h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cqrj0"]
 texture = ExtResource("1_0ucd2")
@@ -1283,7 +1284,7 @@ shape = SubResource("RectangleShape2D_dhbff")
 script = ExtResource("9_jbw8m")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DamageColliders/WinCollide"]
-position = Vector2(2073, 96.25)
+position = Vector2(2068, 97)
 shape = SubResource("RectangleShape2D_m7uls")
 
 [node name="Pickups" type="Node2D" parent="."]
@@ -1328,6 +1329,9 @@ script = ExtResource("11_ymocm")
 
 [node name="Thorn" parent="." instance=ExtResource("12_twv8i")]
 position = Vector2(260, 361)
+
+[node name="CatTree" parent="." instance=ExtResource("13_flh1h")]
+position = Vector2(2068, 129)
 
 [connection signal="body_entered" from="DamageColliders/WaterCollide" to="DamageColliders/WaterCollide" method="_on_body_entered"]
 [connection signal="body_entered" from="DamageColliders/WinCollide" to="DamageColliders/WinCollide" method="_on_body_entered"]
