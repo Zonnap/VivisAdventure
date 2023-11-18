@@ -2,7 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://c00vtmwodn1ym" path="res://levels/Assets/Tiles/Assets/Assets.png" id="1_0ucd2"]
 [ext_resource type="Script" path="res://levels/Scripts/PlayerTestingLevel.gd" id="1_62237"]
-[ext_resource type="AudioStream" uid="uid://cyt143fouc7q2" path="res://Music/Catnip.wav" id="2_ck01j"]
 [ext_resource type="PackedScene" uid="uid://bufcbgo5gj56d" path="res://Player/PlayerCharacter.tscn" id="2_j6t1h"]
 [ext_resource type="Texture2D" uid="uid://ht0kpjeann6k" path="res://levels/Assets/Tiles/Assets/WaterTiles.png" id="2_mr1t7"]
 [ext_resource type="Texture2D" uid="uid://c6tomca2k3u2o" path="res://levels/Assets/Tiles/Assets/Background_2.png" id="3_q65m2"]
@@ -21,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://xsc745xv1y3i" path="res://Obstacles/CatTree.tscn" id="13_flh1h"]
 [ext_resource type="Texture2D" uid="uid://0hj48p3yhmbd" path="res://Animation/Waterfall/W1007.png" id="14_umaoy"]
 [ext_resource type="Texture2D" uid="uid://bh4q4pgv4a24j" path="res://Animation/Waterfall/W1008.png" id="15_8mom3"]
+[ext_resource type="AudioStream" uid="uid://bonqar4k87ma3" path="res://Music/Cat Scratch.wav" id="18_c6who"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cqrj0"]
 texture = ExtResource("1_0ucd2")
@@ -1342,7 +1342,7 @@ position = Vector2(224, 354)
 [node name="Audio" type="Node2D" parent="."]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Audio"]
-stream = ExtResource("2_ck01j")
+stream = ExtResource("18_c6who")
 autoplay = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
