@@ -20,6 +20,10 @@ config/icon="res://icon.svg"
 
 Global="*res://GlobalScripts/Global.gd"
 
+[display]
+
+window/stretch/mode="viewport"
+
 [input]
 
 move_right={

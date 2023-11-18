@@ -1,7 +1,143 @@
-[gd_scene load_steps=3 format=3 uid="uid://dw0i0x08vi47j"]
+[gd_scene load_steps=23 format=3 uid="uid://dw0i0x08vi47j"]
 
 [ext_resource type="Script" path="res://UI/MainMenu/main_menu.gd" id="1_rt0di"]
 [ext_resource type="AudioStream" uid="uid://cartwiiwi4unj" path="res://Music/Catnip.mp3" id="2_44s6g"]
+[ext_resource type="FontFile" uid="uid://d0x1my3so2lwt" path="res://levels/Font/8-bit Arcade In.ttf" id="2_hjgvt"]
+[ext_resource type="Texture2D" uid="uid://dya0fax6oon5m" path="res://levels/Assets/CoverArt.png" id="3_65y36"]
+[ext_resource type="Texture2D" uid="uid://cxnix1vkgw27j" path="res://Animation/CoverArt1.png" id="5_mwx25"]
+[ext_resource type="Script" path="res://UI/MainMenu/CoverArt.gd" id="5_sp7yf"]
+[ext_resource type="Texture2D" uid="uid://dd0qwrj0v86p3" path="res://Animation/CoverArt2.png" id="6_bfq2v"]
+[ext_resource type="Texture2D" uid="uid://du8eys4ekg8qq" path="res://Animation/CoverArt3.png" id="7_vihdb"]
+[ext_resource type="Texture2D" uid="uid://cu83cb5xgsl56" path="res://Animation/CoverArt4.png" id="8_tdsnh"]
+[ext_resource type="Texture2D" uid="uid://dfdy0484olvx4" path="res://Animation/CoverArt5.png" id="9_dsiwc"]
+[ext_resource type="Texture2D" uid="uid://c2bwyj1k23ws7" path="res://Animation/CoverArt6.png" id="10_ijw08"]
+[ext_resource type="Texture2D" uid="uid://c8r6ouwxw2pco" path="res://Animation/CoverArt7.png" id="11_na5n0"]
+[ext_resource type="Texture2D" uid="uid://c7jyytcc12pgg" path="res://Animation/CoverArt8.png" id="12_cdgp6"]
+[ext_resource type="Texture2D" uid="uid://4kwh0gjmmnyb" path="res://Animation/CoverArt9.png" id="13_ngapt"]
+[ext_resource type="Texture2D" uid="uid://jq4le88alme" path="res://Animation/CoverArt10.png" id="14_tuul3"]
+[ext_resource type="Texture2D" uid="uid://cbr1hbabwtqg3" path="res://Animation/CoverArt11.png" id="15_wuvvs"]
+
+[sub_resource type="Animation" id="Animation_rnwao"]
+resource_name = "Menu_Animation"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("5_mwx25"), ExtResource("6_bfq2v"), ExtResource("7_vihdb"), ExtResource("8_tdsnh"), ExtResource("9_dsiwc"), ExtResource("10_ijw08"), ExtResource("11_na5n0"), ExtResource("12_cdgp6"), ExtResource("13_ngapt"), ExtResource("14_tuul3"), ExtResource("15_wuvvs")]
+}
+
+[sub_resource type="Animation" id="Animation_nsxk4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_65y36")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3eikk"]
+_data = {
+"Menu_Animation": SubResource("Animation_rnwao"),
+"RESET": SubResource("Animation_nsxk4")
+}
+
+[sub_resource type="Animation" id="Animation_2ym16"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(490.001, 107)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.5, 1.5)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_nkj81"]
+resource_name = "Text_Animation"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(490.001, 107)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1.5, 1.5), Vector2(1.8, 1.8), Vector2(1.5, 1.5)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2cyqh"]
+_data = {
+"RESET": SubResource("Animation_2ym16"),
+"Text_Animation": SubResource("Animation_nkj81")
+}
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -12,51 +148,97 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_rt0di")
 
-[node name="Title" type="Label" parent="."]
-layout_mode = 0
-offset_left = 64.0
-offset_top = 64.0
-offset_right = 189.0
-offset_bottom = 90.0
-theme_override_font_sizes/font_size = 66
-text = "Vivi's Adventure"
-
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 64.0
-offset_top = -176.0
-offset_right = 134.0
-offset_bottom = -75.0
+offset_left = 712.0
+offset_top = -243.0
+offset_right = 902.0
+offset_bottom = -148.0
 grow_vertical = 0
+scale = Vector2(2, 2)
+theme_override_constants/separation = 2
 alignment = 1
 
 [node name="Start" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+theme_override_colors/font_color = Color(0.992157, 0.803922, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.443137, 0.215686, 1)
+theme_override_fonts/font = ExtResource("2_hjgvt")
 text = "Start
 "
 
 [node name="Settings" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+theme_override_colors/font_color = Color(0.992157, 0.803922, 0, 1)
+theme_override_fonts/font = ExtResource("2_hjgvt")
 text = "Settings
 "
 
 [node name="Credits" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+theme_override_colors/font_color = Color(0.992157, 0.803922, 0, 1)
+theme_override_fonts/font = ExtResource("2_hjgvt")
 text = "Credits
 "
 
 [node name="Exit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+theme_override_colors/font_color = Color(0.992157, 0.803922, 0, 1)
+theme_override_fonts/font = ExtResource("2_hjgvt")
 text = "Exit"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_44s6g")
 autoplay = true
+
+[node name="CoverArt" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(569.047, 232.75)
+scale = Vector2(1.81524, 1.679)
+texture = ExtResource("3_65y36")
+script = ExtResource("5_sp7yf")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CoverArt"]
+libraries = {
+"": SubResource("AnimationLibrary_3eikk")
+}
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Title" type="Label" parent="Node2D"]
+offset_left = 300.0
+offset_top = 50.0
+offset_right = 790.001
+offset_bottom = 157.0
+scale = Vector2(1.5, 1.5)
+pivot_offset = Vector2(250, 50)
+theme_override_colors/font_color = Color(0.992157, 0.803922, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_constants/shadow_outline_size = 2
+theme_override_constants/line_spacing = 2
+theme_override_fonts/font = ExtResource("2_hjgvt")
+theme_override_font_sizes/font_size = 66
+text = "Vivi's Adventure"
+horizontal_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D"]
+root_node = NodePath("../Title")
+libraries = {
+"": SubResource("AnimationLibrary_2cyqh")
+}
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_StartButton_pressed"]
 [connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]
