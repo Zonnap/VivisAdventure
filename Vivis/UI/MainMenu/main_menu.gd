@@ -9,7 +9,7 @@ func _process(delta):
 		$Node2D/AnimationPlayer.play("Text_Animation")
 
 func _on_StartButton_pressed():
-	get_tree().change_scene_to_file("res://levels/PlayerTestingLevel.tscn")
+	get_tree().change_scene_to_file("res://levels/DO NOT USE OR DELETE/forest.tscn")
 
 
 func _on_settings_pressed():

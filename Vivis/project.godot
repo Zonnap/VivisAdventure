@@ -26,7 +26,7 @@ window/stretch/mode="viewport"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/codeandweb.texturepacker/plugin.cfg")
+enabled=PackedStringArray("res://addons/codeandweb.texturepacker/plugin.cfg", "res://addons/ldtk-importer/plugin.cfg")
 
 [input]
 

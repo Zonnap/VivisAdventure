@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://si4jbltnay86"]
+
+[ext_resource type="PackedScene" uid="uid://dowjva2ag131d" path="res://levels/Forest.ldtk" id="1_5ffmc"]
+[ext_resource type="PackedScene" uid="uid://bufcbgo5gj56d" path="res://Player/PlayerCharacter.tscn" id="2_76vmh"]
+[ext_resource type="Texture2D" uid="uid://c6tomca2k3u2o" path="res://levels/Assets/Tiles/Assets/Background_2.png" id="2_oqv5a"]
+[ext_resource type="Texture2D" uid="uid://dbr0tu81s1817" path="res://levels/Assets/Tiles/Assets/Background_1.png" id="3_ogpiy"]
+
+[node name="Forest" instance=ExtResource("1_5ffmc")]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." index="1"]
+scale = Vector2(2.395, 2.395)
+transform = Transform2D(2.395, 0, 0, 2.395, 0, 0)
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground" index="0"]
+texture_filter = 1
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(496, 0)
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2" index="0"]
+position = Vector2(249.269, 136.534)
+texture = ExtResource("2_oqv5a")
+metadata/_edit_lock_ = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" index="1"]
+texture_filter = 1
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(496, 0)
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" index="0"]
+position = Vector2(249.269, 136.534)
+texture = ExtResource("3_ogpiy")
+metadata/_edit_lock_ = true
+
+[node name="Player" type="Node2D" parent="." index="2"]
+
+[node name="PlayerCharacter" parent="Player" index="0" instance=ExtResource("2_76vmh")]
+position = Vector2(80, 152)
