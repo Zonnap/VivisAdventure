@@ -7,9 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://c6tomca2k3u2o" path="res://levels/Assets/Tiles/Assets/Background_2.png" id="3_q65m2"]
 [ext_resource type="Texture2D" uid="uid://dbr0tu81s1817" path="res://levels/Assets/Tiles/Assets/Background_1.png" id="4_tcl2m"]
 [ext_resource type="PackedScene" uid="uid://cxyxx0qp2mamp" path="res://Pickups/FishSnacks.tscn" id="6_da4gq"]
-[ext_resource type="Script" path="res://levels/WaterCollide.gd" id="8_bwnrl"]
+[ext_resource type="Script" path="res://Obstacles/Scripts/WaterCollide.gd" id="7_v1mn2"]
 [ext_resource type="Texture2D" uid="uid://dc3pwb8hdid71" path="res://Animation/Waterfall/W1001.png" id="8_jrnbv"]
-[ext_resource type="Script" path="res://levels/WinCollide.gd" id="9_jbw8m"]
 [ext_resource type="Texture2D" uid="uid://vx5e32hdia8s" path="res://Animation/Waterfall/W1002.png" id="9_swtor"]
 [ext_resource type="Texture2D" uid="uid://bnf3ma6agg2f1" path="res://Animation/Waterfall/W1003.png" id="10_28uvu"]
 [ext_resource type="Texture2D" uid="uid://bdvwirir501ey" path="res://Animation/Waterfall/W1004.png" id="11_roc4s"]
@@ -20,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://xsc745xv1y3i" path="res://Obstacles/CatTree.tscn" id="13_flh1h"]
 [ext_resource type="Texture2D" uid="uid://0hj48p3yhmbd" path="res://Animation/Waterfall/W1007.png" id="14_umaoy"]
 [ext_resource type="Texture2D" uid="uid://bh4q4pgv4a24j" path="res://Animation/Waterfall/W1008.png" id="15_8mom3"]
+[ext_resource type="Script" path="res://Obstacles/Scripts/WinCollide.gd" id="16_j1cfc"]
 [ext_resource type="AudioStream" uid="uid://bonqar4k87ma3" path="res://Music/Cat Scratch.wav" id="18_c6who"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cqrj0"]
@@ -1314,7 +1314,7 @@ scale = Vector2(1, 1)
 [node name="DamageColliders" type="Node2D" parent="."]
 
 [node name="WaterCollide" type="Area2D" parent="DamageColliders"]
-script = ExtResource("8_bwnrl")
+script = ExtResource("7_v1mn2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DamageColliders/WaterCollide"]
 position = Vector2(560, 535)
@@ -1328,7 +1328,7 @@ sprite_frames = SubResource("SpriteFrames_yv5mx")
 frame_progress = 0.00265259
 
 [node name="WinCollide" type="Area2D" parent="DamageColliders"]
-script = ExtResource("9_jbw8m")
+script = ExtResource("16_j1cfc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DamageColliders/WinCollide"]
 position = Vector2(2068, 97)

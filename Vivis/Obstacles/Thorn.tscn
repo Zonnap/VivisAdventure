@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dfgbu5l118bb7"]
 
-[ext_resource type="Script" path="res://Obstacles/Thorn.gd" id="1_1iyij"]
+[ext_resource type="Script" path="res://Obstacles/Scripts/Thorn.gd" id="1_1iyij"]
 [ext_resource type="Texture2D" uid="uid://3524fvcd212x" path="res://levels/Assets/Tiles/Thorn.png" id="1_or4if"]
 
 [node name="Thorn" type="Area2D"]
