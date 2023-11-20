@@ -13,8 +13,8 @@ transform = Transform2D(2.395, 0, 0, 2.395, 0, 0)
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground" index="0"]
 texture_filter = 1
-motion_scale = Vector2(0.1, 0.1)
-motion_mirroring = Vector2(496, 0)
+motion_scale = Vector2(0.05, 0.05)
+motion_mirroring = Vector2(496, 271)
 metadata/_edit_lock_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2" index="0"]
@@ -24,8 +24,8 @@ metadata/_edit_lock_ = true
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" index="1"]
 texture_filter = 1
-motion_scale = Vector2(0.2, 0.2)
-motion_mirroring = Vector2(496, 0)
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(496, 271)
 metadata/_edit_lock_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" index="0"]
@@ -36,4 +36,4 @@ metadata/_edit_lock_ = true
 [node name="Player" type="Node2D" parent="." index="2"]
 
 [node name="PlayerCharacter" parent="Player" index="0" instance=ExtResource("2_76vmh")]
-position = Vector2(80, 152)
+position = Vector2(241, 356)
